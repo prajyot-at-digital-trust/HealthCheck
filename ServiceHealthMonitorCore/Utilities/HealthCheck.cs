@@ -87,7 +87,7 @@ namespace ServiceHealthMonitorCore.Utilities
                 var content = new FormUrlEncodedContent(data);
                 var httpClientHandler = new HttpClientHandler();
 
-                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => { return true; };
+                //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => { return true; };
 
                 var client = new HttpClient(httpClientHandler);
                 client.BaseAddress = new Uri(response.Url);
